@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-firebase-api": {
+      "projectType": "library",
+      "root": "projects/ngx-firebase-api",
+      "sourceRoot": "projects/ngx-firebase-api/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-firebase-api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-firebase-api/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-firebase-api/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-firebase-api/src/test.ts",
+            "tsConfig": "projects/ngx-firebase-api/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-firebase-api/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-firebase-api"
 }
