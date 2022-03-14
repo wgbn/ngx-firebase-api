@@ -77,3 +77,5 @@ The TokenInterceptorService will have the function of intercepting all HTTP requ
 Internally, NgxFirebaseApi uses the HttpClient to make all requests to the Firebase API.
 
 It is not the function of the library to inject this token, but of the application as a whole. 
+
+You can follow this article to implement your own Token Interceptor https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8
